@@ -1,0 +1,10 @@
+rcc.o: rcc.c ../../../include/libopencm3/cm3/assert.h \
+ ../../../include/libopencm3/cm3/common.h \
+ /usr/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+ /usr/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+ ../../../include/libopencm3/stm32/rcc.h \
+ ../../../include/libopencm3/stm32/memorymap.h \
+ ../../../include/libopencm3/stm32/l0/memorymap.h \
+ ../../../include/libopencm3/cm3/memorymap.h \
+ ../../../include/libopencm3/stm32/l0/rcc.h \
+ ../../../include/libopencm3/stm32/common/rcc_common_all.h
