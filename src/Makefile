@@ -59,15 +59,6 @@ flash: $(ELF)
 gdb: $(ELF)
 	$(GDB) $(BMP_ARGS) $(ELF)
 
-ocd-gdb: $(ELF)
-	-$(GDB) --eval "target remote | $(OOCD) -f $(OOCD_INTERFACE) -f $(OOCD_BOARD) -f debug.cfg" $(ELF)
-
-erase:
-	$(OOCD) -f $(OOCD_INTERFACE) -f $(OOCD_BOARD) \
-            -c "init" -c "reset init" \
-            -c "stm32f1x unlock 0; reset halt" \
-            -c "flash erase_sector 0 0 last" -c "reset" -c "shutdown"
-
 .PHONY += debug size erase
 
 OBJS := $(sort $(OBJS))

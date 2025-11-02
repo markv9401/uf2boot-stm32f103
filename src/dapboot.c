@@ -66,7 +66,7 @@ extern int msc_started;
 int main(void) {
     bool appValid = validate_application();
 
-    if (appValid && target_get_force_app()) {
+    if (appValid && !target_get_force_bootloader()) {
          jump_to_application();
          return 0;
     }

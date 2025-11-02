@@ -40,12 +40,13 @@
 #define UF2_FAMILY 0x5ee21072
 
 #undef VOLUME_LABEL
-#define VOLUME_LABEL "BLUEPILL"
+#define VOLUME_LABEL "Cycle8 Unchained"
 #undef PRODUCT_NAME
-#define PRODUCT_NAME "Blue Pill STM32F103xB"
+#define PRODUCT_NAME "Cycle8 Unchained by RWR works"
 #undef BOARD_ID
-#define BOARD_ID "STM32F103-blue-pill-v0"
-
+#define BOARD_ID "Cycle8-Unchained-STM32F103CB"
+#undef INDEX_URL
+#define INDEX_URL "https://github.com/markv9401/Cycle8_Unchained"
 //#define DOUBLE_TAP
 
 #endif
