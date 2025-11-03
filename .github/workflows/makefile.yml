@@ -8,8 +8,9 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - uses: actions/checkout@v4
@@ -20,7 +21,11 @@ jobs:
 
     - name: Make
       run: make
+      
+    - name: Create Release
+      uses: ncipollo/release-action@v1.20.0
+      with:
+        allowUpdates: true
+        artifacts: build/uf2boot.bin
+        tag: stm32f103cb
 
-
-
-            
